@@ -5,7 +5,17 @@ const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime() + '';
     newTuit.likes = 0;
-    tuits.push(newTuit);
+    newTuit.dislikes = 0;
+    newTuit.postedBy = {username: "Marley Robinson"};
+    newTuit.stats = {comments: 0,
+                     retuits: 0,
+                     likes: 0};
+    newTuit.handle = "mrobinson";
+    newTuit.title = '';
+    newTuit.time = "just now";
+    newTuit.attachments = {img: "profile_banner.jpg"};
+    newTuit.avatarImg = "marley.JPG"
+    tuits.unshift(newTuit);
     res.json(newTuit);
 };
 
