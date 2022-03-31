@@ -13,8 +13,8 @@ const createTuit = (req, res) => {
     newTuit.handle = "mrobinson";
     newTuit.title = '';
     newTuit.time = "just now";
-    newTuit.attachments = {img: "profile_banner.jpg"};
-    newTuit.avatarImg = "marley.JPG"
+    newTuit.attachments = {img: "https://artsy-media-uploads.s3.amazonaws.com/2P6t_Yt6dF0TNN76dlp-_Q%2F3417757448_4a6bdf36ce_o.jpg"};
+    newTuit.avatarImg = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
     tuits.unshift(newTuit);
     res.json(newTuit);
 };
