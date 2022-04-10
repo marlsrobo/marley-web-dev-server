@@ -5,7 +5,9 @@ import helloController from "./controllers/hello-controller.js";
 import userController from "./controllers/users/user-controller.js";
 import tuitsController from "./controllers/tuits/tuits-controller.js";
 
-mongoose.connect("mongodb://localhost:27017/webdev");
+const CONNECTION_STRING = "mongodb+srv://marlsrobo:shit4brains@cluster0.dvavu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" || "mongodb://localhost:27017/webdev"
+
+mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(cors());
 app.use(express.json());
